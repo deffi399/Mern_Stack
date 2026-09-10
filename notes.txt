@@ -1,0 +1,15 @@
+ol order list
+ul un order list
+block element whole
+inline specific
+psecide classes will get applied based on user interation with element type 
+     link :un visited link
+     visited:visited link
+     hover: mouse click
+     active: selected link
+duration:how the animation take times
+timimg function:speed
+deley :wait time
+
+form cvontrol is for input 
+form select is for drop down styling

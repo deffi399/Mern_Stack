@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Management System</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, sans-serif;
+        }
+
+        body{
+            background-color:#f4f6f9;
+        }
+
+        .header{
+            background-color:#1e3a5f;
+            color:white;
+            text-align:center;
+            padding:20px;
+        }
+
+        .header img{
+            vertical-align:middle;
+            border-radius:5px;
+        }
+
+        .header h1{
+            display:inline-block;
+            margin-left:10px;
+            vertical-align:middle;
+        }
+
+        .navbar{
+            background-color:#2f5fa3;
+            text-align:center;
+            padding:15px;
+        }
+
+        .navbar a{
+            color:white;
+            text-decoration:none;
+            margin:20px;
+            font-weight:bold;
+        }
+
+        .container{
+            width:90%;
+            margin:20px auto;
+        }
+
+        .section{
+            background:white;
+            padding:20px;
+            margin-bottom:20px;
+            border-radius:10px;
+            box-shadow:0px 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .section h2{
+            color:#1e3a5f;
+            margin-bottom:15px;
+        }
+
+        .dashboard{
+            display:flex;
+            justify-content:space-between;
+            gap:15px;
+            flex-wrap:wrap;
+        }
+
+        .card{
+            flex:1;
+            min-width:200px;
+            padding:20px;
+            text-align:center;
+            border-radius:10px;
+        }
+
+        .total{
+            background:#eaf3ff;
+        }
+
+        .available{
+            background:#eef9ee;
+        }
+
+        .booked{
+            background:#fff6e8;
+        }
+
+        .customer{
+            background:#f4ecff;
+        }
+
+        .card h3{
+            font-size:30px;
+            margin-top:10px;
+        }
+
+        table{
+            width:100%;
+            border-collapse:collapse;
+        }
+
+        th{
+            background:#2f80ed;
+            color:white;
+            padding:12px;
+        }
+
+        td{
+            padding:12px;
+            text-align:center;
+            border:1px solid #ddd;
+        }
+
+        tr:nth-child(even){
+            background:#f8f9fa;
+        }
+
+        .status-booked{
+            color:green;
+            font-weight:bold;
+        }
+
+        .status-available{
+            color:blue;
+            font-weight:bold;
+        }
+    </style>
+</head>
+
+<body>
+
+<div>
+
+    <div class="header">
+        <img src="../assets/download.jpg" alt="" width="40px" height="40px">
+        <h1>Hotel Management System</h1>
+    </div>
+
+    <div class="navbar">
+        <a href="">Home</a>
+        <a href="">Rooms</a>
+        <a href="">Customers</a>
+        <a href="">Bookings</a>
+        <a href="">Contacts</a>
+    </div>
+
+    <div class="container">
+
+        <div class="section">
+            <h2>Dashboard</h2>
+
+            <div class="dashboard">
+
+                <div class="card total">
+                    <p>Total Rooms</p>
+                    <h3>20</h3>
+                </div>
+
+                <div class="card available">
+                    <p>Available Rooms</p>
+                    <h3>12</h3>
+                </div>
+
+                <div class="card booked">
+                    <p>Booked Rooms</p>
+                    <h3>8</h3>
+                </div>
+
+                <div class="card customer">
+                    <p>Customers Today</p>
+                    <h3>5</h3>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Recent Booking</h2>
+
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Customer</th>
+                    <th>Room</th>
+                    <th>Status</th>
+                </tr>
+
+                <tr>
+                    <td>1</td>
+                    <td>John</td>
+                    <td>101</td>
+                    <td class="status-booked">Booked</td>
+                </tr>
+
+                <tr>
+                    <td>2</td>
+                    <td>David</td>
+                    <td>102</td>
+                    <td class="status-available">Available</td>
+                </tr>
+
+                <tr>
+                    <td>3</td>
+                    <td>Mary</td>
+                    <td>103</td>
+                    <td class="status-booked">Booked</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="section">
+            <h2>Rooms</h2>
+
+            <table>
+                <tr>
+                    <th>Room No</th>
+                    <th>Type</th>
+                    <th>Price</th>
+                    <th>Status</th>
+                </tr>
+
+                <tr>
+                    <td>101</td>
+                    <td>Single</td>
+                    <td>1000</td>
+                    <td class="status-available">Available</td>
+                </tr>
+
+                <tr>
+                    <td>102</td>
+                    <td>Double</td>
+                    <td>2000</td>
+                    <td class="status-booked">Booked</td>
+                </tr>
+
+                <tr>
+                    <td>103</td>
+                    <td>Single</td>
+                    <td>1000</td>
+                    <td class="status-available">Available</td>
+                </tr>
+
+            </table>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

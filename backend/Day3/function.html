@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>DAY 3  JAVASCRIPT clousure functions TASKS</h1>
+    <script>
+
+        // TASK 1 – PRIVATE BANK BALANCE
+
+const createBankAccount = () => {
+
+    let balance = 5000
+
+    const checkBalance = () => {
+        console.log("Account Balance: " + balance)
+    }
+
+    return checkBalance
+}
+
+let outsideBalance = 100000
+
+console.log("Outside Balance: " + outsideBalance)
+
+let call = createBankAccount()
+
+call()
+
+
+// TASK 2 – DEPOSIT USING CLOSURE
+
+const createAccount = () => {
+
+    let balance = 1000
+
+    const obj = {
+
+        deposit: function(amt) {
+            balance += amt
+        },
+
+        getBalance: function() {
+            console.log("Current Balance is:", balance)
+        }
+
+    }
+
+    return obj
+}
+
+let calll = createAccount()
+
+calll.deposit(500)
+calll.deposit(200)
+calll.getBalance()
+
+
+// TASK 3 – PRIVATE COUNTER
+
+const createCounter = () => {
+
+    let count = 0
+
+    const obj = {
+
+        increment: function() {
+            count++
+        },
+
+        decrement: function() {
+            count--
+        },
+
+        getCount: function() {
+            console.log("Count:", count)
+        }
+
+    }
+
+    return obj
+}
+
+let counter = createCounter()
+
+counter.increment()
+counter.increment()
+counter.increment()
+counter.decrement()
+counter.getCount()
+
+let outsideCount = 100
+
+console.log("Outside Count:", outsideCount)
+
+counter.getCount()
+
+
+// TASK 4 – EMPLOYEE SALARY PRIVACY
+
+const createEmployee = (name, initialSalary) => {
+
+    let salary = initialSalary
+
+    const obj = {
+
+        getName: function() {
+            console.log("Employee Name:", name)
+        },
+
+        getSalary: function() {
+            console.log("Employee Salary:", salary)
+        },
+
+        increaseSalary: function(inc) {
+
+            if (inc > 0) {
+                salary += inc
+                console.log("Updated Salary:", salary)
+            }
+
+            else {
+                console.log("Give valid amount")
+            }
+        }
+
+    }
+
+    return obj
+}
+
+let sal = createEmployee("Arun", 25000)
+
+sal.getName()
+sal.getSalary()
+sal.increaseSalary(5000)
+    </script>
+</body>
+</html>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Daily Tasks</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: #fff7fb;
+            color: #333;
+            padding: 50px 6%;
+        }
+
+        /* Heading */
+
+        .heading {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .heading h1 {
+            font-size: 42px;
+            color: #d63384;
+            margin-bottom: 8px;
+        }
+
+        .heading p {
+            color: #777;
+        }
+
+        /* Task Grid */
+
+        .task-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        /* Card */
+
+        .task-card {
+            background: white;
+            border-radius: 18px;
+            padding: 25px;
+
+            border: 1px solid #f3c4d9;
+
+            box-shadow: 0 8px 25px rgba(214, 51, 132, 0.08);
+
+            transition: 0.3s;
+        }
+
+        .task-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(214, 51, 132, 0.18);
+        }
+
+        /* Day */
+
+        .day {
+            display: inline-block;
+
+            background: #ffe0ed;
+            color: #d63384;
+
+            padding: 7px 13px;
+
+            border-radius: 20px;
+
+            font-size: 12px;
+            font-weight: bold;
+
+            margin-bottom: 22px;
+        }
+
+        /* Title */
+
+        .task-card h2 {
+            color: #333;
+            font-size: 21px;
+            margin-bottom: 12px;
+        }
+
+        /* Description */
+
+        .task-card p {
+            color: #777;
+            font-size: 14px;
+            line-height: 1.6;
+
+            margin-bottom: 22px;
+        }
+
+        /* Button */
+
+        .task-btn {
+            display: inline-block;
+
+            background: #d63384;
+            color: white;
+
+            padding: 11px 20px;
+
+            border-radius: 8px;
+
+            text-decoration: none;
+
+            font-size: 14px;
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+        .task-btn:hover {
+            background: #b52b70;
+        }
+
+        /* Mobile */
+
+        @media (max-width: 700px) {
+
+            .task-container {
+                grid-template-columns: 1fr;
+            }
+
+            body {
+                padding: 35px 20px;
+            }
+
+            .heading h1 {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Heading -->
+
+    <div class="heading">
+
+        <h1>Daily Tasks</h1>
+
+        <p>Complete your tasks and keep learning 🚀</p>
+
+    </div>
+
+
+    <!-- Task Cards -->
+
+    <div class="task-container">
+
+
+        <!-- Day 01 -->
+
+        <div class="task-card">
+
+            <span class="day">DAY 01</span>
+
+            <h2>JavaScript Introduction</h2>
+
+            <p>
+                Learn what JavaScript is,
+                where it is used and how to
+                include JavaScript in an HTML page.
+            </p>
+
+            <a href="./backend/Day1/intro.html" class="task-btn">
+                View Task →
+            </a>
+
+        </div>
+
+
+        <!-- Day 02 -->
+
+        <div class="task-card">
+
+            <span class="day">DAY 02</span>
+
+            <h2>For Loops</h2>
+
+            <p>
+                Learn JavaScript loops and
+                practice different programs
+                using for loops.
+            </p>
+
+            <a href="./backend/Day2/looping.html" class="task-btn">
+                View Task →
+            </a>
+
+        </div>
+
+
+        <!-- Day 03 -->
+
+        <div class="task-card">
+
+            <span class="day">DAY 03</span>
+
+            <h2>Closure Functions</h2>
+
+            <p>
+                Learn about JavaScript functions,
+                scope and closure functions.
+            </p>
+
+            <a href="./backend/Day3/function.html" class="task-btn">
+                View Task →
+            </a>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

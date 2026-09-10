@@ -1,0 +1,42 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+#header
+{
+    background-color: azure;
+    height:50px;
+    border: 1px solid black;
+}
+#left
+{
+    background-color: beige;
+    height:600px;
+    width: 200px;
+    border: 1px solid black;
+    float: right ;
+}
+#body
+{
+    background-color: blanchedalmond;
+    height:600px;
+    width: 700px;
+    border: 1px solid black;
+    float: right;
+}
+    
+
+#right
+{
+    background-color: beige;
+    height:600px;
+    width:200px;
+    border: 1px solid black;
+}
+
+#footer
+{
+    background-color: aquamarine;
+    height: 50px;
+    border: 1px solid black;
+}
