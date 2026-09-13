@@ -1,6 +1,0 @@
-initialize:git init
-git status:check files
-add files:git add.
-what it does:git ststus
-commit files:git commit-m"first comit"
-connet github respository:
