@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+console.log("TASK 1 - ELECTRICITY BILL CALCULATION")
+
+let customerName = "Deffi"
+let unitsConsumed = 250
+let bill = 0
+if (unitsConsumed <= 100) {
+    bill = unitsConsumed * 2
+}
+else if (unitsConsumed <= 200) {
+    bill = (100 * 2) + ((unitsConsumed - 100) * 3)
+}
+else {
+    bill = (100 * 2) + (100 * 3) + ((unitsConsumed - 200) * 5)
+}
+console.log("Customer:", customerName)
+console.log("Electricity Bill: ₹" + bill)
+
+
+console.log("TASK 2 - ATM CASH WITHDRAWAL")
+
+let balance = 15000
+let withdrawAmount = 4000
+if (withdrawAmount <= 0) {
+    console.log("Invalid withdrawal amount")
+}
+else if (withdrawAmount % 500 != 0) {
+    console.log("Amount must be a multiple of 500")
+}
+else if (withdrawAmount > balance) {
+    console.log("Insufficient balance")
+}
+else {
+    balance = balance - withdrawAmount
+    console.log("Withdrawal Successful")
+    console.log("Remaining Balance:", balance)
+}
+
+
+console.log("TASK 3 - EMPLOYEE LOGIN ATTEMPTS")
+
+let correctPin = 1234
+let enteredPins = [1111, 2222, 1234]
+for (let i = 0; i < 3; i++) {
+    let enteredPin = enteredPins[i]
+    if (enteredPin == correctPin) {
+        console.log("Login Successful")
+        break
+    }
+    else {
+        console.log("Incorrect PIN")
+    }
+
+    if (i == 2) {
+        console.log("Account Blocked")
+    }
+}
+
+
+console.log("TASK 4 - MULTIPLICATION BILL TABLE")
+
+let price = 250
+for (let quantity = 1; quantity <= 5; quantity++) {
+    let total = quantity * price
+    console.log("Quantity " + quantity + " = ₹" + total)
+}
+
+
+console.log("TASK 5 - SEAT BOOKING DISPLAY")
+
+let rows = 3
+let seats = 5
+for (let i = 1; i <= rows; i++) {
+
+    for (let j = 1; j <= seats; j++) {
+
+        console.log("Row " + i + " - Seat " + j)
+    }
+}
+
+
+console.log("TASK 6 - DELIVERY CHARGE FUNCTION")
+
+function calculateDelivery(amount) {
+    let deliveryCharge = 0
+    if (amount >= 1000) {
+        deliveryCharge = 0
+    }
+    else if (amount >= 500) {
+        deliveryCharge = 50
+    }
+    else {
+        deliveryCharge = 100
+    }
+    let finalAmount = amount + deliveryCharge
+
+    return finalAmount
+}
+console.log(calculateDelivery(1200))
+console.log(calculateDelivery(700))
+console.log(calculateDelivery(300))
+
+
+console.log("TASK 7 - FIND HIGHEST SALES")
+
+let sales = [12000, 18000, 9500, 25000, 16000]
+let highest = sales[0]
+for (let i = 1; i < sales.length; i++) {
+    if (sales[i] > highest) {
+        highest = sales[i]
+    }
+}
+console.log("Highest Sales:", highest)
+
+
+console.log("TASK 8 - PALINDROME ARRAY")
+
+let numbers = [1, 2, 3, 2, 1]
+let isPalindrome = true
+for (let i = 0; i < numbers.length / 2; i++) {
+    let j = numbers.length - 1 - i
+    if (numbers[i] != numbers[j]) {
+        isPalindrome = false
+        break
+    }
+}
+
+if (isPalindrome) {
+    console.log("Palindrome")
+}
+else {
+    console.log("Not Palindrome")
+}
+
+    </script>
+</body>
+</html>
